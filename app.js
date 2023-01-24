@@ -3,33 +3,27 @@ function getComputerChoice() {
   return selection[Math.floor(Math.random() * 3)];
 }
 
-function playRound(playerSelection, computerSelection) {
+function playRound() {
+  let playerSelection = document.getElementById("playerInput").value;
+  let computerSelection = getComputerChoice();
   if (playerSelection == computerSelection) {
-    return "Try again";
+    document.getElementById("answer").innerHTML = "Try again"
   } else if (
     (playerSelection == "rock" && computerSelection == "paper") ||
     (playerSelection == "paper" && computerSelection == "scrissors") ||
     (playerSelection == "scrissors" && computerSelection == "rock")
   ) {
-    return `You lose! ${computerSelection} beats ${playerSelection}`;
+    document.getElementById("answer").innerHTML = "You lose!";
   } else if (
     (playerSelection == "rock" && computerSelection == "scrissors") ||
     (playerSelection == "paper" && computerSelection == "rock") ||
     (playerSelection == "scrissors" && computerSelection == "paper")
   ) {
-    return `You Win! ${playerSelection} beats ${computerSelection}`;
+    document.getElementById("answer").innerHTML = "You Win!";
   }
+console.log(playerSelection)
+console.log(computerSelection)
 }
 
-const playerSelection = "rock";
-const computerSelection = getComputerChoice();
 
-console.log(playRound(playerSelection, computerSelection));
-
-function game() {
-  console.log(playRound(playerSelection, getComputerChoice()));
-}
-
-for (let i = 0; i < 5; i++) {
-  game();
-}
+ 
