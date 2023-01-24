@@ -4,17 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <title>Rock, paper or scrissor</title>
 </head>
 <body>
+  <div class="game">
     <form>
         <div class="mb-3"> 
-          <label class="form-label">Rock, paper or scrissor ?</label>
-          <input type="text" class="form-control" id="playerInput">
+          <label class="form-label">Rock, paper or scrissors ?</label> <br>
+          <select id="playerInput" style="font-family:MV boli;">
+            <option>rock</option>
+            <option>paper</option>
+            <option>scrissors</option>
+          </select>
          
         <button type="button" class="btn btn-primary" Onclick="playRound()">Submit</button>
       </form>
          <p id="answer"></p>
-      <script src="./app.js"></script>
+    
+  </div>
+
+  <script src="./app.js"></script>
 </body>
 </html>
